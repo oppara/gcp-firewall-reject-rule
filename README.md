@@ -19,11 +19,13 @@ https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c#comment-766ec1b2f29f3583
 ## create
 
 ```sh
+./create.sh cn
 ./create.sh au
 ```
 
 ## delete
 
 ```sh
+./delete.sh cn
 ./delete.sh au
 ```
