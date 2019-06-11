@@ -1,0 +1,19 @@
+
+usage () {
+  cat << EOF
+Usage:
+  $0 country_code
+
+Example:
+  $0 cn
+  $0 au
+
+See:
+  https://ipv4.fetus.jp/
+EOF
+}
+
+if [[ $# -ne 1 ]]; then
+  usage
+  exit 1
+fi
