@@ -20,5 +20,5 @@ instance=$1
 zone=$2
 cwd=$(cd $(dirname $0) && pwd)
 
-$cwd/lib/remove-tags.sh ${instance} cn ${zone}
-$cwd/lib/remove-tags.sh ${instance} au ${zone}
+$cwd/lib/add-tags.sh ${instance} cn ${zone}
+$cwd/lib/add-tags.sh ${instance} au ${zone}

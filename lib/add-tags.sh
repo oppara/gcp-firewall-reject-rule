@@ -1,8 +1,8 @@
 #!/bin/bash
 set -eu
 
-. usage-tags
-. common
+cwd=$(cd $(dirname $0) && pwd)
+. $cwd/common
 
 
 instance=$1

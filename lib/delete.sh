@@ -1,8 +1,9 @@
 #!/bin/bash
 set -eu
 
-. usage-firewall
-. common
+cwd=$(cd $(dirname $0) && pwd)
+
+. $cwd/common
 
 delete_rule () {
   gcloud compute firewall-rules delete ${1} --quiet

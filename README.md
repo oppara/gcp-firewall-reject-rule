@@ -16,30 +16,27 @@ https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c#comment-766ec1b2f29f3583
 > 
 > さらにその上に fail2ban を仕掛けて数回アタックがあると ban する様にしています。そこまでやると毎月 0 円 ～ 2 円 くらいになります。
 
-## create firewall rule
+
+ファイアウォールのルール作成
 
 ```sh
-./create.sh cn
-./create.sh au
+./setup-fw.sh
 ```
 
-## delete firewall rule
+作成したルールをインスタンスに設定
 
 ```sh
-./delete.sh cn
-./delete.sh au
+./setup-tags.sh web us-west1-b 
 ```
 
-## add tags to instance
+インスタンスに設定したルールを削除
 
 ```sh
-./add-tags.sh web cn us-west1-b 
-./add-tags.sh web au us-west1-b 
+./remove-tags.sh web us-west1-b 
 ```
 
-## remove tags from instance
+ファイアウォールのルールの削除
 
 ```sh
-./remove-tags.sh web cn us-west1-b 
-./remove-tags.sh web au us-west1-b 
+./remove-fw.sh
 ```
