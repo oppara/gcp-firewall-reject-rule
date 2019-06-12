@@ -1,17 +1,18 @@
 #!/bin/bash
 set -eu
 
-. usage
+. usage-firewall
+. common
 
 delete_rule () {
   gcloud compute firewall-rules delete ${1} --quiet
 }
 
-rule="reject-${1}"
+code="${1}"
 
 while read -r line
 do
   delete_rule $line
 done << EOF
-$(gcloud compute firewall-rules list --format=json | jq -r '.[].name' | grep ${rule})
+$(fetch_rules $code)
 EOF

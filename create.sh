@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-. usage
+. usage-firewall
 
 create_rule () {
   code=$1

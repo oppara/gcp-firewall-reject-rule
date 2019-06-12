@@ -1,0 +1,7 @@
+
+fetch_rules () {
+  local rule="reject-${1}"
+  gcloud compute firewall-rules list --format=json | jq -r '.[].name' | grep ${rule}
+}
+
+# vim: ft=sh
