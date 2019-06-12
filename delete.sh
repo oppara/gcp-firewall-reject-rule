@@ -12,7 +12,9 @@ code="${1}"
 
 while read -r line
 do
-  delete_rule $line
+  if [[ -n $line ]]; then
+    delete_rule $line
+  fi
 done << EOF
 $(fetch_rules $code)
 EOF
