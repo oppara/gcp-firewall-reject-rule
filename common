@@ -4,4 +4,9 @@ fetch_rules () {
   gcloud compute firewall-rules list --format=json | jq -r '.[].name' | grep ${rule}
 }
 
+fetch_rule_string () {
+  local code="${1}"
+  fetch_rules $code | xargs | tr " " ","
+}
+
 # vim: ft=sh

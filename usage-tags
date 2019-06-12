@@ -1,0 +1,22 @@
+
+usage () {
+  cat << EOF
+Usage:
+  $0 instance_name country_code zone
+
+Example:
+  $0 web cn us-west1-b
+  $0 web au us-west1-b
+
+See:
+  https://cloud.google.com/sdk/gcloud/reference/compute/instances/add-tags
+  https://cloud.google.com/sdk/gcloud/reference/compute/instances/remove-tags
+EOF
+}
+
+if [[ $# -ne 3 ]]; then
+  usage
+  exit 1
+fi
+
+# vim: ft=sh
