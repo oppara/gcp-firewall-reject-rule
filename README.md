@@ -16,6 +16,7 @@ https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c#comment-766ec1b2f29f3583
 > 
 > さらにその上に fail2ban を仕掛けて数回アタックがあると ban する様にしています。そこまでやると毎月 0 円 ～ 2 円 くらいになります。
 
+## Usage
 
 ファイアウォールのルール作成
 
@@ -40,3 +41,13 @@ https://qiita.com/riku-shiru/items/a870edd9dc0b132e092c#comment-766ec1b2f29f3583
 ```sh
 ./remove-fw.sh
 ```
+
+## Requirements
+
+* [gcloud](https://cloud.google.com/sdk/gcloud/reference/)
+* [jq](https://stedolan.github.io/jq/)
+
+
+## License
+
+MIT
